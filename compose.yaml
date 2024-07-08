@@ -1,0 +1,8 @@
+services:
+    database:
+        image: mysql:8
+        environment:
+            MYSQL_DATABASE: users-auth
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+            - 3306:3306
