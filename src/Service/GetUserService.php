@@ -7,7 +7,7 @@ use App\Security\AccessTokenHandler;
 use App\Security\ApiKeyAuthenticator;
 use Symfony\Component\Security\Core\Exception\BadCredentialsException;
 
-class GetUser extends ApiKeyAuthenticator
+class GetUserService extends ApiKeyAuthenticator
 {
     public function __construct(
         private readonly AccessTokenHandler $tokenHandler,

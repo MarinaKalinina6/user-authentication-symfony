@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Service\GetUser;
+use App\Service\GetUserService;
 use App\Service\RemoveUserService;
 use App\Service\UpdateUserService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -35,7 +35,7 @@ class UserMethodsController extends AbstractController
     }
 
     #[Route('/api/user', methods: ['GET'])]
-    public function get(Request $request, GetUser $getUser): Response
+    public function get(Request $request, GetUserService $getUser): Response
     {
         $response = $getUser->getData($request);
 
